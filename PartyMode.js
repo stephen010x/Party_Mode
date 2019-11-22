@@ -43,18 +43,15 @@ function randColor() {
     return ('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6);
 }
 
-function letsParty(party) {    
-    if (party === true) {
-        
-        setTimeout(function(){
-            jQuery("html").css({
-                "position": "relative",
-                "opacity": "0.70",
-                "filter": "alpha(opacity=20)",
-                "-moz-opacity": "0.20",
-            });
-            myLoop(30,250);
-        }, 2000);
-        return "Heck yeah! Lets Party!"
-    }
+function partyMode() {
+    setTimeout(function(){
+        jQuery("html").css({
+            "position": "relative",
+            "opacity": "0.70",
+            "filter": "alpha(opacity=20)",
+            "-moz-opacity": "0.20",
+        });
+        myLoop(30,250);
+    }, 2000);
+    return "Lets Party!"
 }
